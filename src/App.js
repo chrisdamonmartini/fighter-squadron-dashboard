@@ -1,12 +1,11 @@
 import React from 'react';
+import Header from './components/Header';
 import './styles/global.css';
 
 function App() {
   return (
     <div className="app-container">
-      <header style={{padding: '20px', backgroundColor: '#1e293b'}}>
-        <h1>455TH FIGHTER SQUADRON COMMAND CENTER</h1>
-      </header>
+      <Header />
       <main style={{padding: '20px'}}>
         <div style={{
           background: '#334155', 
@@ -14,8 +13,8 @@ function App() {
           borderRadius: '8px',
           marginTop: '20px'
         }}>
-          <h2>Debug Mode</h2>
-          <p>If you can see this, React is working!</p>
+          <h2>Dashboard Content</h2>
+          <p>The Header component is working! Next we'll add the Dashboard.</p>
         </div>
       </main>
     </div>
