@@ -1,0 +1,81 @@
+:root {
+  /* Base theme - dark mode inspired by cockpit displays */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  
+  /* Status colors with gradient options */
+  --status-ready: linear-gradient(135deg, #059669, #10b981);
+  --status-mission: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  --status-warning: linear-gradient(135deg, #d97706, #f59e0b);
+  --status-alert: linear-gradient(135deg, #b91c1c, #ef4444);
+  
+  /* Accent colors */
+  --accent-primary: #06b6d4;
+  --accent-secondary: #8b5cf6;
+  
+  /* Text colors */
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+/* Glass-morphism effects for cards */
+.glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+@keyframes statusChange {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.status-change {
+  animation: statusChange 0.6s ease-out;
+}
